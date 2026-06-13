@@ -17,6 +17,21 @@ awesome-agent-paper/
 │   ├── 00-summary-2026-W01-W24.md # 24 周 top10 命中论文汇总
 │   └── 01~20-*.md                 # 20 篇精读笔记
 │
+├── deep-research/                 # Deep Research 专题（月榜 top50，DR 主线深挖）
+│   ├── README.md                  # 13 篇精读 + 7 大趋势
+│   ├── 00-summary-2025.11-2026.06.md  # 8 个月 top50 命中 DR 论文汇总 + 研究现状与趋势
+│   └── 01~13-*.md                 # 13 篇精读笔记
+│
+├── evolve/                        # Agent Evolve / 自演化 Agent 专题（月榜 top100）
+│   ├── README.md                  # 50 篇收录（14 精读 + 34 简述 + 2 跨库引用）+ 12 条趋势
+│   ├── 00-summary-2025-11-2026-06.md  # 8 个月命中论文汇总 + 研究现状与 10 大方向
+│   └── 01~22-*.md                 # 14 篇精读笔记
+│
+├── memory/                        # Agent Memory 专题（月榜 top50，聚焦 working memory）
+│   ├── README.md                  # 11 篇精读（9 文件）+ 表示/更新/使用 三维地图
+│   ├── 00-summary-2025.11-2026.06.md  # 8 个月命中论文汇总（按类别）+ 趋势
+│   └── 01~11-*.md                 # 11 篇精读笔记（9 文件）
+│
 └── tongyi-deepresearch/           # 通义 DeepResearch 系列（按时间演化）
     ├── README.md                  # 11 篇系列论文笔记 + 演化脉络
     └── papers/                    # 原始 PDF
@@ -24,7 +39,9 @@ awesome-agent-paper/
 
 ---
 
-## 两条子线索
+## 五条子线索
+
+> 两条**横向**全景（huggingface 周榜、evolve 月榜）+ 三条**纵深**专题（deep-research、memory、tongyi）。
 
 ### 1. [huggingface/](./huggingface/) — 横向：2026 H1 全景
 
@@ -46,7 +63,65 @@ awesome-agent-paper/
 
 → 详见 [huggingface/README.md](./huggingface/README.md)
 
-### 2. [tongyi-deepresearch/](./tongyi-deepresearch/) — 纵向：通义 DR 系列演化
+### 2. [deep-research/](./deep-research/) — 纵深：Deep Research 一条线挖到底
+
+**数据范围**：HuggingFace Papers **月榜每月 top50**，2025-11 ~ 2026-06（共 8 个月）
+
+**筛选方法**：每月 top50 中只取 Deep Research / Search Agent / Web Agent / Agentic Search 主线（比周榜库的 top10 挖得更深），已被 huggingface/ 收录者只交叉引用、不重复
+
+**组织方式**：按主题分 6 类，共 13 篇精读
+
+| 主题 | 篇数 | 代表论文 |
+|---|---|---|
+| Scaling 新轴（交互/宽度/委派） | 3 | MiroThinker v1.0, IterResearch, SearchSwarm/WideSeek |
+| 开源 DR 系统 & 训练范式 | 5 | DR Tulu, Step-DeepResearch, OpenSeeker, OpenResearcher, Harness-1 |
+| 多模态 DR | 2 | Vision-DeepResearch, OpenSearch-VL |
+| 检索接口（DCI） | 1 | DCI & GrepSeek |
+| 记忆即研究 | 1 | General Agentic Memory |
+| DR 评测 | 1 | DeepResearchEval / DRIFT / K-BrowseComp |
+
+→ 详见 [deep-research/README.md](./deep-research/README.md)
+
+### 3. [evolve/](./evolve/) — 横向：自演化 Agent 全景
+
+**数据范围**：HuggingFace Papers **月榜每月 top100**，2025-11 ~ 2026-06（共 8 个月）
+
+**筛选方法**：每月 top100 中 Agent Evolve / 自演化 Agent 主线（比 DR 专题更宽的 top100，覆盖 skill 进化、协同进化、记忆进化等全部自演化形态），已被 huggingface/ 收录者只交叉引用、不重复
+
+**组织方式**：按主题分 8 类，共 **50 篇**（14 篇精读 📖 + 34 篇简述 📄 + 2 篇跨库引用 🔗）
+
+| 主题 | 篇数 | 代表论文 |
+|---|---|---|
+| 自演化 Agent 训练框架 | 8 | Agent0, EvoCUA, Agent-World, DreamGym |
+| Skill 进化 | 13 | SkillRL, Skill1, PSN, Ctx2Skill, SkillsVote |
+| 演化式优化（LLM×Evolution） | 6 | CSE, QuantaAlpha |
+| 环境/课程协同进化 | 5 | Agent-World, AutoEnv, OpenGame |
+| 记忆进化 | 6 | EvoArena |
+| 组织级/元自改进 | 5 | Hyperagents, Memento, CORAL |
+| 多模态/GUI 自演化 | 5 | Agent0-VL, MM-Zero, SpatialEvo |
+| 综述 | 2 | Agentic Reasoning, Agentic Env Engineering |
+
+→ 详见 [evolve/README.md](./evolve/README.md)
+
+### 4. [memory/](./memory/) — 纵深：Agent Memory（聚焦 working memory）
+
+**数据范围**：HuggingFace Papers **月榜每月 top50**，2025-11 ~ 2026-06（共 8 个月）
+
+**筛选方法**：每月 top50 中 Agent Memory 主线，**尤其聚焦 working memory**——agent 多轮/长程任务中上下文不断增长时，那团"当前状态"该怎么**表示 / 更新 / 使用**；与 deep-research/ 重叠者（GAM、IterResearch）只交叉引用
+
+**组织方式**：按"表示 / 更新 / 使用"三维度组织，共 **11 篇精读**（9 个文件）
+
+| 维度 | 篇数 | 代表论文 |
+|---|---|---|
+| 核心（三维全覆盖） | 1 | Harness-1（状态外化范式） |
+| 怎么表示 | 2 | FS-Researcher（文件系统）, δ-mem（latent 状态矩阵） |
+| 怎么使用 | 4 | Masking, SWE-Pruner, QwenLong-L1.5, ACC |
+| 怎么更新 | 2 | EvoArena/EvoMem, MemSkill+Memento |
+| 理论框架 | 2 | Memory survey, Externalization+Efficient Agents |
+
+→ 详见 [memory/README.md](./memory/README.md)
+
+### 5. [tongyi-deepresearch/](./tongyi-deepresearch/) — 纵向：通义 DR 系列演化
 
 **对象**：阿里通义实验室开源的 Web Agent / Deep Research 系列（对标 OpenAI Deep Research）
 
@@ -71,17 +146,30 @@ WebWalker → WebDancer → WebSailor → WebShaper → WebWatcher
 ### 想快速了解 2026 H1 Agent 领域全景
 → 直接看 [huggingface/README.md](./huggingface/README.md) 的"最短路径 4 篇"
 
+### 想把 Deep Research 一条线挖到底
+→ 看 [deep-research/README.md](./deep-research/README.md)，先读 00-summary 的"研究现状与趋势"再按主题串读
+
+### 想了解自演化 / Skill 进化 Agent
+→ 看 [evolve/README.md](./evolve/README.md) 的"最短路径 4 篇"，再按三流派（神经 RL / 程序化 / 自然语言文档）串读 Skill 进化
+
+### 想理解长程 Agent 的上下文/记忆怎么管
+→ 看 [memory/README.md](./memory/README.md)，按"表示 / 更新 / 使用"三维度串读，核心读 Harness-1 + Masking
+
 ### 想理解一个完整的开源 Deep Research 体系如何搭建
 → 按时间顺序通读 [tongyi-deepresearch/README.md](./tongyi-deepresearch/README.md)
 
 ### 想找特定主题
-- **RL 训练算法**：huggingface/01, 08, 09, 10
-- **数据合成**：huggingface/02, 03, 11 + tongyi WebShaper / AgentFounder
-- **Deep Research**：huggingface/04, 07, 12 + 整个 tongyi 系列
+- **RL 训练算法**：huggingface/01, 08, 09, 10 + deep-research/03, 09 + evolve/05, 06
+- **数据合成**：huggingface/02, 03, 11 + deep-research/04, 05, 06, 09 + tongyi WebShaper / AgentFounder
+- **Deep Research**：huggingface/04, 07, 12 + **整个 deep-research/ 专题** + 整个 tongyi 系列
+- **多模态 DR**：deep-research/07, 08
+- **检索接口 / DCI**：deep-research/10
+- **自演化 / Skill 进化**：**整个 evolve/ 专题** + huggingface/03, 11（SkillOpt, SkillClaw）
+- **Agent Memory / 长上下文管理**：**整个 memory/ 专题**（Harness-1, Masking, FS-Researcher, δ-mem…）+ deep-research/11
 - **旗舰模型**：huggingface/05, 06, 13
 - **World Model**：huggingface/14, 15, 16
-- **Benchmarks**：huggingface/17, 18, 19
-- **Harness Engineering**：huggingface/20 + 07
+- **Benchmarks**：huggingface/17, 18, 19 + deep-research/13 + evolve/18（EvoArena）
+- **Harness Engineering**：huggingface/20 + deep-research/09, 10 + memory/01（Harness-1）, 10
 
 ---
 

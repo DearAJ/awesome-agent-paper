@@ -17,6 +17,11 @@ awesome-agent-paper/
 │   ├── 00-summary-2026-W01-W24.md # 24 周 top10 命中论文汇总
 │   └── 01~20-*.md                 # 20 篇精读笔记
 │
+├── agentic-rl/                    # Agentic RL 专题（月榜 top50，agent+RL 双命中）
+│   ├── README.md                  # 39 篇收录（15 精读 + 24 简述）+ 8 大趋势
+│   ├── 00-summary-2025.11-2026.06.md  # 8 个月命中论文汇总（按月）+ 研究现状与趋势
+│   └── 01~15-*.md                 # 15 篇精读笔记
+│
 ├── deep-research/                 # Deep Research 专题（月榜 top50，DR 主线深挖）
 │   ├── README.md                  # 13 篇精读 + 7 大趋势
 │   ├── 00-summary-2025.11-2026.06.md  # 8 个月 top50 命中 DR 论文汇总 + 研究现状与趋势
@@ -39,9 +44,9 @@ awesome-agent-paper/
 
 ---
 
-## 五条子线索
+## 六条子线索
 
-> 两条**横向**全景（huggingface 周榜、evolve 月榜）+ 三条**纵深**专题（deep-research、memory、tongyi）。
+> 两条**横向**全景（huggingface 周榜、evolve 月榜）+ 四条**纵深**专题（agentic-rl、deep-research、memory、tongyi）。
 
 ### 1. [huggingface/](./huggingface/) — 横向：2026 H1 全景
 
@@ -63,7 +68,25 @@ awesome-agent-paper/
 
 → 详见 [huggingface/README.md](./huggingface/README.md)
 
-### 2. [deep-research/](./deep-research/) — 纵深：Deep Research 一条线挖到底
+### 2. [agentic-rl/](./agentic-rl/) — 纵深：Agentic RL 一条线挖到底
+
+**数据范围**：HuggingFace Papers **月榜每月 top50**，2025-11 ~ 2026-06（共 8 个月）
+
+**筛选方法**：标题/摘要/关键词**同时**命中 Agent 信号与 RL 信号（双命中），再剔除 world-model / VLA 机器人 / 视频图像生成 / 纯 RLVR 推理（非 agentic）；已被 huggingface/ 收录者只交叉引用、不重复
+
+**组织方式**：按主题分 5 类，共 15 篇精读（+ 24 简述）
+
+| 主题 | 篇数 | 代表论文 |
+|---|---|---|
+| RL 算法 / 训练范式 | 4 | DreamGym, ERL, OpenClaw-RL, LLM-in-Sandbox |
+| Agent 自演化 & 经验 | 3 | Agent0, EvoCUA, CUDA Agent |
+| Multi-Agent RL | 3 | HACRL, MATTRL, WideSeek-R1 |
+| Deep Research / Search Agent RL | 3 | IterResearch, DR Tulu, Harness-1 |
+| Skill RL | 2 | SkillRL, SKILL0 |
+
+→ 详见 [agentic-rl/README.md](./agentic-rl/README.md)
+
+### 3. [deep-research/](./deep-research/) — 纵深：Deep Research 一条线挖到底
 
 **数据范围**：HuggingFace Papers **月榜每月 top50**，2025-11 ~ 2026-06（共 8 个月）
 
@@ -82,7 +105,7 @@ awesome-agent-paper/
 
 → 详见 [deep-research/README.md](./deep-research/README.md)
 
-### 3. [evolve/](./evolve/) — 横向：自演化 Agent 全景
+### 4. [evolve/](./evolve/) — 横向：自演化 Agent 全景
 
 **数据范围**：HuggingFace Papers **月榜每月 top100**，2025-11 ~ 2026-06（共 8 个月）
 
@@ -103,7 +126,7 @@ awesome-agent-paper/
 
 → 详见 [evolve/README.md](./evolve/README.md)
 
-### 4. [memory/](./memory/) — 纵深：Agent Memory（聚焦 working memory）
+### 5. [memory/](./memory/) — 纵深：Agent Memory（聚焦 working memory）
 
 **数据范围**：HuggingFace Papers **月榜每月 top50**，2025-11 ~ 2026-06（共 8 个月）
 
@@ -121,7 +144,7 @@ awesome-agent-paper/
 
 → 详见 [memory/README.md](./memory/README.md)
 
-### 5. [tongyi-deepresearch/](./tongyi-deepresearch/) — 纵向：通义 DR 系列演化
+### 6. [tongyi-deepresearch/](./tongyi-deepresearch/) — 纵向：通义 DR 系列演化
 
 **对象**：阿里通义实验室开源的 Web Agent / Deep Research 系列（对标 OpenAI Deep Research）
 
@@ -146,6 +169,9 @@ WebWalker → WebDancer → WebSailor → WebShaper → WebWatcher
 ### 想快速了解 2026 H1 Agent 领域全景
 → 直接看 [huggingface/README.md](./huggingface/README.md) 的"最短路径 4 篇"
 
+### 想把 Agentic RL（agent + 强化学习）一条线挖到底
+→ 看 [agentic-rl/README.md](./agentic-rl/README.md)，先读 00-summary 的"研究现状与趋势 8 条"再按 5 类（算法/自演化/MARL/DR-RL/Skill-RL）串读
+
 ### 想把 Deep Research 一条线挖到底
 → 看 [deep-research/README.md](./deep-research/README.md)，先读 00-summary 的"研究现状与趋势"再按主题串读
 
@@ -159,7 +185,8 @@ WebWalker → WebDancer → WebSailor → WebShaper → WebWatcher
 → 按时间顺序通读 [tongyi-deepresearch/README.md](./tongyi-deepresearch/README.md)
 
 ### 想找特定主题
-- **RL 训练算法**：huggingface/01, 08, 09, 10 + deep-research/03, 09 + evolve/05, 06
+- **Agentic RL（agent + RL 训练）**：**整个 agentic-rl/ 专题**（DreamGym, OpenClaw-RL, HACRL, CUDA Agent…）+ huggingface/01, 08, 09, 10
+- **RL 训练算法**：huggingface/01, 08, 09, 10 + agentic-rl/01-04, 08-10 + deep-research/03, 09 + evolve/05, 06
 - **数据合成**：huggingface/02, 03, 11 + deep-research/04, 05, 06, 09 + tongyi WebShaper / AgentFounder
 - **Deep Research**：huggingface/04, 07, 12 + **整个 deep-research/ 专题** + 整个 tongyi 系列
 - **多模态 DR**：deep-research/07, 08

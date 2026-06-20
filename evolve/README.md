@@ -83,7 +83,7 @@
 
 | #            | 论文                              | 月/票        | 机构 | 核心贡献 |
 | ------------ | --------------------------------- | ------------ | ---- | -------- |
-| **18** | **[EvoArena](18-evoarena.md)** 📖 | 26-06 / 90↑  | MIT  | 首个**环境演化评测**基准 + **EvoMem**（patch-based 记忆进化），GAIA +6.1% |
+| **18** | **[EvoArena](18-evoarena.md)** 📖 | 26-06 / 90↑  | NUS等  | 首个**环境演化评测**基准（Terminal/SWE/Persona 三域“演化化”） + **EvoMem**（append-only patch 记忆进化），GAIA +6.1% |
 
 ### 🏢 组织级 / 多 Agent 自改进（2 篇）
 
@@ -134,7 +134,7 @@ Q:/awesome-agent-paper/evolve/
 │ ── 环境/课程协同进化 ──（16 AutoEnv / 17 OpenGame 见 00-summary）
 │
 │ ── 记忆进化 ──
-├── 18-evoarena.md                         # 环境演化评测 + EvoMem（MIT）
+├── 18-evoarena.md                         # 环境演化评测 + EvoMem（NUS等）
 │
 │ ── 组织级自改进 ──（19 OneManCompany / 20 ProDa 见 00-summary）
 │
